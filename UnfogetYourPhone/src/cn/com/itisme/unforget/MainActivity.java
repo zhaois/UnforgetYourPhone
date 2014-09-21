@@ -10,9 +10,16 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		intent = new Intent(
 				"cn.com.itisme.unforget.service.AcceleratedSpeedService");
 		startService(intent);
+		
+		
+		
+		
+//		stopService(intent);
+		
 	}
 
 }

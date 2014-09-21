@@ -18,6 +18,7 @@ public class AcceleratedSpeedService extends Service implements
 	private float accelerator;
 	private Vibrator vibrator;
 	private int i = 0;
+	private Intent intent;
 
 	@Override
 	public IBinder onBind(Intent arg0) {
@@ -55,6 +56,8 @@ public class AcceleratedSpeedService extends Service implements
 				if (i > 6) {
 					Log.i(TAG, "" + accelerator + "   " + i);
 					vibrator.vibrate(1000);
+					intent = new Intent("cn.som.itisme.unforget.MainActivity");
+					startActivity(intent);
 				}
 			} else {
 				i = 0;
